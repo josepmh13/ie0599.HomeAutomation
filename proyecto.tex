@@ -1,0 +1,172 @@
+% ------------------------------------
+% UNIVERSIDAD DE COSTA RICA
+% Facultad de Ingeniería
+% Escuela de Ingeniería Eléctrica
+% IE0599 - Anteproyecto de Trabajo Final de Graduación
+% By José Martínez Hdez, B34024
+%
+% PLANTILLA Y GUÍA DEL TRABAJO ESCRITO
+% Versión: v1.0 (marzo 2017)
+% ------------------------------------
+
+% Tipo de documento
+\documentclass[12pt,final]{proyectoelectrico}
+\rmfamily
+% A. PAQUETES Y MACROS ESPECIALES -------
+% Paquetes y definiciones que no están incluidos 
+% en la clase proyectoelectrico.cls o que son 
+% propios del proyecto.
+\input{configuracion.tex}
+
+% Tipografía
+\usepackage{libertine}
+\usepackage{libertinust1math}
+\usepackage[T1]{fontenc}
+\renewcommand*{\ttdefault}{cmtt}
+
+%%%AGREGADOS
+\usepackage{multirow} % para las tablas
+\definecolor{bl}{rgb}{0.6602, 0.796875, 0.8862}
+\definecolor{cl}{rgb}{0.8359, 0.9140625, 0.96875}
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+\definecolor{p1}{rgb}{1.0,0.698,0.4}
+\usetikzlibrary{shadows,arrows.meta}
+\usepackage{adjustbox}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{multirow}
+\usepackage{colortbl}
+\definecolor{lightgray}{gray}{0.9}
+\definecolor{bg1}{rgb}{0.8,1.0,0.8}
+\usetikzlibrary{arrows.meta, shapes.geometric, calc, shadows}
+\colorlet{mygreen}{green!75!black}
+\colorlet{col1in}{red!30}
+\colorlet{col1out}{red!40}
+\colorlet{col2in}{mygreen!40}
+\colorlet{col2out}{mygreen!50}
+\colorlet{col3in}{blue!30}
+\colorlet{col3out}{blue!40}
+\colorlet{col4in}{mygreen!20}
+\colorlet{col4out}{mygreen!30}
+\colorlet{col5in}{blue!10}
+\colorlet{col5out}{blue!20}
+\colorlet{col6in}{blue!20}
+\colorlet{col6out}{blue!30}
+\colorlet{col7out}{orange}
+\colorlet{col7in}{orange!50}
+\colorlet{col8out}{orange!40}
+\colorlet{col8in}{orange!20}
+\colorlet{linecol}{blue!60}
+\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{calc,positioning,shadows.blur,decorations.pathreplacing}
+\usepackage{etoolbox}
+
+
+% ---------------------------------------
+
+% B. DATOS ------------------------------
+% Todos los nombres incluyen dos apellidos,
+% acentos y signos de puntuación apropiados.
+% Revisar las recomendaciones sobre el título
+% y los nombres de los profesores en la guía.
+
+% Título del proyecto
+\titulo{Diseño e implementación de un sistema domótico con componentes electrónicos Sonoff}
+
+% Autor (nombre y carné)
+\autor{José Pablo Martínez Hernández}
+\carne{B34024}
+\correo{\url{josepablo.martinez@ucr.ac.cr} / \url{jpmh.1309@gmail.com}}
+\celular{+506 8617 75 29}
+
+% Profesor(a) guía
+% (Ing.) Nombre Apellido Apellido(, título)
+\guia{Ing. Jaime Cascante Vindas, Ph.D.}
+
+% Profesores lectores 
+%\lectorA{Ing. Esteban Ortiz Cubero, Lic.}
+% \lectorA{Pendiente.}
+\lectorA{Ing. José David Rojas Fernández, Ph.D.}
+\lectorB{Ing. Roberto Rodríguez Rodríguez, Dr.}
+% \lectorB{Pendiente.}
+
+% Fecha de entrega del trabajo escrito
+\mes{7}		% Número del mes
+\ano{2019}	% Formato AAAA
+% ---------------------------------------
+
+% C. CONTENIDOS -------------------------
+
+%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%
+
+\frontmatter
+
+% 1. PORTADA
+\portada
+
+% 2. FICHA RESUMEN
+\iffinal
+\fichatitlepage
+\fi
+
+% 3. DECLARACIÓN
+\iffinal
+\disclaimerpage
+\fi
+
+% 4. HOJA DE APROBACIÓN
+%\iffinal
+%\aprobacion
+%\fi
+
+% 5. RESUMEN (EN ESPAÑOL E INGLÉS)
+%\input{contenido/resumen.tex}
+%\input{contenido/abstract.tex}
+
+% 6. RECONOCIMIENTOS
+%\iffinal
+%\input{contenido/reconocimientos.tex}
+%\fi
+
+% 7. TABLAS DE CONTENIDO, FIGURAS Y TABLAS
+\tableofcontents
+\listoffigures
+\listoftables
+
+% 8. NOMENCLATURA
+\input{contenido/nomenclatura.tex}
+
+\mainmatter
+
+% 8. CAPÍTULOS
+\input{contenido/1_introduccion.tex}
+\input{contenido/2_marco_teorico.tex}
+%\input{contenido/3_mecanum.tex}
+%\input{contenido/4_modelodcpid.tex}
+%\input{contenido/5_modelocine.tex}
+%\input{contenido/6_odonav.tex}
+%\input{contenido/7_move.tex}
+%\input{contenido/8_conclusiones.tex}
+
+% 8. BILIOGRAFÍA
+\bibliographystyle{plain}
+\bibliography{bibliografia/bibliografia.bib}
+
+% 9. APÉNDICES
+\appendix
+\input{apendices/A_timeline.tex}
+%\input{apendices/B_video.tex}
+%\input{apendices/B_gopro.tex}
+%\input{apendices/C_codes.tex}
+%\input{apendices/D_connection.tex}
+
+\backmatter
+
+
+
+%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%
